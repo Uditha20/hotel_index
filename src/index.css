@@ -1,0 +1,92 @@
+/* nav bar css */
+.navbar {
+  /* background-color: #ffffff; */
+  height: 80px;
+  position: relative;
+  /* width: 1140px; */
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+.nav-link {
+  font-weight: 500;
+}
+
+.nav-btn-primary {
+  background-color: #34cac6;
+  margin-right: 25px;
+  border-radius: 20px;
+  color: #ffffff;
+}
+@media screen and (max-width: 992px) {
+  .abc{
+    background-color: aliceblue;
+    opacity: 0.8;
+    border-radius: 15px;
+    z-index: 1;
+    
+  }
+  ul,.nav-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .nav-link{
+    font-weight: 800; 
+  }
+  .hero-img{
+    height: 40%;
+  }
+  
+  
+  /* .nav-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+  } */
+  .btn {
+    margin: 0px;
+    font-weight: 800;
+  }
+}
+
+/* hero section */
+.outer-hero{
+  background-color: #F4F9F8;
+}
+.inner-hero {
+  height: 762px;
+}
+.hero-img {
+  height: 100%;
+}
+           
+.hero-text{
+  font-size: 64px;
+  font-family: 'Plus Jakarta Sans';
+  color: #121511;
+  font-weight: 600;
+  line-height: 80px;
+
+}
+
+/* best offer */
+.best-outer{
+  height: 665px;
+}
+
+.best-offer-btn{
+  background-color:#F1F7F6;
+  border-radius: 20px;
+  height: 40px;
+  width: 102px;
+  color: #34cac6;
+}
+.offer-card{
+  height:262px;
+}
