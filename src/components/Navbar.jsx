@@ -55,7 +55,7 @@ function Navbar() {
               </li>
             </ul>
             <div className="nav-btn">
-              <button className="btn" style={{ marginRight: "25px" }}>
+              <button className="btn login" style={{ marginRight: "25px" }}>
                 Login{" "}
               </button>
               <button className="btn nav-btn-primary">Sign up</button>
