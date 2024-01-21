@@ -6,7 +6,8 @@ import hotel2 from "../assets/image/h3.png";
 import hotel3 from "../assets/image/h4.png";
 import hotel4 from "../assets/image/h5.png";
 import hotel5 from "../assets/image/h6.png";
-
+import feedone from "../assets/image/feed1.png";
+import feed2 from "../assets/image/feed2.png"
 
 
    export const bestOffer=[
@@ -67,7 +68,7 @@ import hotel5 from "../assets/image/h6.png";
         },
         ,  {
             "id":4,
-            "src":hotel2,
+            "src":hotel3,
             "place":"Grande Maranga Ubud",
             "location":"Bali,Indonesia",
             "rating":"4.8",
@@ -75,7 +76,7 @@ import hotel5 from "../assets/image/h6.png";
             "mode":"night"
         },,  {
             "id":5,
-            "src":hotel2,
+            "src":hotel4,
             "place":"Grande Maranga Ubud",
             "location":"Bali,Indonesia",
             "rating":"4.8",
@@ -83,7 +84,7 @@ import hotel5 from "../assets/image/h6.png";
             "mode":"night"
         },,  {
             "id":6,
-            "src":hotel2,
+            "src":hotel5,
             "place":"Grande Maranga Ubud",
             "location":"Bali,Indonesia",
             "rating":"4.8",
@@ -91,3 +92,42 @@ import hotel5 from "../assets/image/h6.png";
             "mode":"night"
         },
     ]
+
+
+export const feedback=[{
+    "id":1,
+    "des":"Designspace is a really great site with really great people and the quality of content is excellent. Some of the best designers in the world use this, and it is inspirational.",
+    "src":feedone,
+    "name":"Angel Karamoy",
+    "feedback":"Happy customer"
+},
+{
+    "id":1,
+    "des":"Designspace has consistently delivered above and beyond my expectations! Brilliant design work, incredible response time and a really friendly team. strongly recommend them.",
+    "src":feed2,
+    "name":"Angel Karamoy",
+    "feedback":"Happy customer"
+},
+{
+    "id":1,
+    "des":"Designspace has consistently delivered above and beyond my expectations! Brilliant design work, incredible response time and a really friendly team. strongly recommend them.",
+    "src":feed2,
+    "name":"Angel Karamoy",
+    "feedback":"Happy customer"
+},{
+    "id":1,
+    "des":"Designspace has consistently delivered above and beyond my expectations! Brilliant design work, incredible response time and a really friendly team. strongly recommend them.",
+    "src":feed2,
+    "name":"Angel Karamoy",
+    "feedback":"Happy customer"
+},{
+    "id":1,
+    "des":"Designspace has consistently delivered above and beyond my expectations! Brilliant design work, incredible response time and a really friendly team. strongly recommend them.",
+    "src":feed2,
+    "name":"Angel Karamoy",
+    "feedback":"Happy customer"
+},
+
+
+
+]

@@ -6,19 +6,28 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
-import { bestOffer, popular } from "../data/data";
+import { bestOffer, popular,feedback } from "../data/data";
 import { CiStar,CiSearch} from "react-icons/ci";
 
-import icon from "../assets/image/Icon.svg";
-import Footer from "../components/Footer";
-import feedone from "../assets/image/feed1.png";
+import icon from "../assets/image/Iconone.png";
+import icon2 from "../assets/image/Icon2.png"
+import icon3 from "../assets/image/Icon3.png"
 import gps from "../assets/image/gps.png";
+import filtertwo from "../assets/image/filtr2.png"
+import filterthree from "../assets/image/filter3.png"
+import filterfour from "../assets/image/filter4.png"
 
+
+
+
+import Footer from "../components/Footer";
+
+import { FaRegStar } from "react-icons/fa";
 
 export default function HomePage() {
   // owcarousel options
   const options = {
-    margin: 10,
+    margin: 30,
 
     responsive: {
       0: {
@@ -64,9 +73,9 @@ export default function HomePage() {
         </div>
         <div
           className="row position-absolute  filter-bar d-flex  justify-content-center"
-          style={{ bottom: "15%", left: "20%" }}
+          style={{ bottom: "25%", left: "20%" }}
         >
-          <div className="col-lg-2 col-12  ">
+          <div className="col-lg-2 col-12">
             <div className="col-lg-12 d-flex filter-bar-item align-items-center justify-content-center mx-2 mt-4">
               <img src={gps} className="" />
              <h5 className="mx-1">Location</h5> 
@@ -85,7 +94,7 @@ export default function HomePage() {
           </div>
           <div className="col-lg-2 col-12 ">
             <div className="col-lg-12  d-flex align-items-center justify-content-center mx-2 mt-4 filter-bar-item">
-              <img src={gps} className="" />
+              <img src={filtertwo} className="" />
              <h5 className="mx-1">Check In</h5> 
             </div>
             <div className="col-lg-12 mx-2 mt-1">
@@ -94,7 +103,7 @@ export default function HomePage() {
           </div>
           <div className="col-lg-2 col-12 ">
             <div className="col-lg-12  d-flex align-items-center justify-content-center mx-2 mt-4">
-              <img src={gps} className="" />
+              <img src={filterthree} className="" />
              <h5 className="mx-1">Check Out</h5> 
             </div>
             <div className="col-lg-12 mx-2 mt-1">
@@ -103,7 +112,7 @@ export default function HomePage() {
           </div>
           <div className="col-lg-2 col-12 ">
             <div className="col-lg-12 d-flex align-items-center justify-content-center mx-2 mt-4">
-              <img src={gps} className="" />
+              <img src={filterfour} className="" />
              <h5 className="mx-1">Room</h5> 
             </div>
             <div className="col-lg-12 mx-2 mt-1">
@@ -117,22 +126,22 @@ export default function HomePage() {
               </select>
             </div>
           </div>
-            <div className="col-lg-2 col-12" style={{height:"100"}}>
-            <div className="col-lg-12  d-flex align-items-center justify-content-center mx-5 mt-2">
+            <div className="col-lg-2 col-12">
              <button className="btn filter-bar-btn"><CiSearch size={"24px"}/>Search</button>
-            </div>
+            
           </div>    
         </div>
       </div>
+
       {/* best offer */}
       <div className="container-fluid mt-5" style={{ background: "#ffffff" }}>
         <div className="container   best-outer">
           <div className="row">
             <h1 className="mt-5">Best offer this month</h1>
-            <div className=" d-flex justify-content-between">
-              <p>This can be detailed description or just a short text</p>
+            <div className=" d-flex justify-content-between ">
+              <p className="">This can be detailed description or just a short text</p>
               <button
-                className="btn best-offer-btn col-12"
+                className="btn best-offer-btn"
                 style={{ fontWeight: "bold" }}
               >
                 View All
@@ -141,7 +150,7 @@ export default function HomePage() {
             <OwlCarousel className="owl-theme mt-4" loop {...options}>
               {bestOffer.map((dataItems, key) => {
                 return (
-                  <div className="item ">
+                  <div className="item">
                     <div className="offer-card d-flex align-items-center">
                       <div className="offer-card-inner">
                         <div className="d-flex m-4">
@@ -154,13 +163,14 @@ export default function HomePage() {
                           </div>
                           <div
                             className="d-flex align-items-center justify-content-center"
-                            style={{ flexDirection: "column", width: "50%" }}
+                            style={{ flexDirection: "column", width: "60%" }}
                           >
-                            <h1>{dataItems.discout}% Off</h1>
-                            <p className="" style={{ textAlign: "center" }}>
+                            <h2>{dataItems.discout}% Off</h2>
+                            <p className="best-text" style={{ textAlign: "center" }}>
                               This can be detailed description or <br /> just a
                               short text
                             </p>
+                        <button className="btn book-btn">BOOK NOW</button>
                           </div>
                         </div>
                       </div>
@@ -177,14 +187,14 @@ export default function HomePage() {
         className="container-fluid "
         style={{ background: "#F4F9F8", minHeight: "1150px" }}
       >
-        <div className="container   best-outer">
+        <div className="container popular-hotel">
           <div className="row">
-            <h1 className="mt-5">Best offer this month</h1>
+            <h1 className="mt-5">Explore popular hotel</h1>
             <div className=" d-flex justify-content-between">
               <p>This can be detailed description or just a short text</p>
               <button
-                className="btn best-offer-btn col-12"
-                style={{ fontWeight: "bold" }}
+                className="btn populart-btn col-12"
+                style={{ fontWeight: "bold"}}
               >
                 View All
               </button>
@@ -202,19 +212,16 @@ export default function HomePage() {
                     />
                     <div class="card-body">
                       <h5 class="card-title">{popularData.place}</h5>
-                      <p class="card-text d-flex justify-content-between">
+                      <p class="card-text d-flex justify-content-between ">
                         {popularData.location}
                         <span>
                           {" "}
-                          <CiStar
-                            className="mb-1 mx-1"
-                            style={{ background: "yellow" }}
-                          />
-                          {popularData.rating}
+                          <FaRegStar style={{fill:"yellow",fontWeight:"bold"}} className="mx-1"/>
+                          {popularData.rating }
                         </span>
                       </p>
                       <div className="d-flex">
-                        <h4 className="card-title">{popularData.price}</h4>
+                        <h4 className="card-title" style={{fontSize:"24px"}}>{popularData.price}</h4>
                         <p>/{popularData.mode}</p>
                       </div>
                     </div>
@@ -231,7 +238,7 @@ export default function HomePage() {
           <div className="row ">
             <div className="col-lg-6 col-12">
               <div className="care-inner">
-                <h1 style={{ fontSize: "48px" }}>
+                <h1 className="care-text" style={{ fontSize: "48px" }}>
                   We care for each guest like a family
                 </h1>
                 <p style={{ fontSize: "20px" }}>
@@ -244,7 +251,7 @@ export default function HomePage() {
                 <div className="care-icons d-flex align-items-start">
                   <img src={icon} />
                   <div>
-                    <h5 className="mx-2">Best quality Hotel</h5>
+                    <h5 className="mx-2" style={{fontWeight:"bold"}}>Best quality Hotel</h5>
                     <p className="mx-2">
                       Sometimes features require a short description. This can
                       be detailed description or just a short text.
@@ -252,9 +259,9 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="care-icons d-flex align-items-start">
-                  <img src={icon} />
+                  <img src={icon2} />
                   <div>
-                    <h5 className="mx-2">Best quality Hotel</h5>
+                    <h5 className="mx-2" style={{fontWeight:"bold"}}>Low price & many promo</h5>
                     <p className="mx-2">
                       Sometimes features require a short description. This can
                       be detailed description or just a short text.
@@ -262,9 +269,9 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="care-icons d-flex align-items-start">
-                  <img src={icon} />
+                  <img src={icon3} />
                   <div>
-                    <h5 className="mx-2">Best quality Hotel</h5>
+                    <h5 className="mx-2" style={{fontWeight:"bold"}}>Money back guarantee</h5>
                     <p className="mx-2">
                       Sometimes features require a short description. This can
                       be detailed description or just a short text.
@@ -287,11 +294,11 @@ export default function HomePage() {
       {/* feed back */}
       <div
         className="container-fluid mt-5"
-        style={{ background: "#B3BAC5", height: "680px" }}
+        style={{ background: "#B3BAC5", height: "620px" }}
       >
-        <div className="container   best-outer">
+        <div className="container">
           <div className="row">
-            <h1 className="mt-5">Best offer this month</h1>
+            <h1 className="mt-5">What people say..</h1>
             <div className=" d-flex justify-content-between">
               <p>This can be detailed description or just a short text</p>
               <button
@@ -302,64 +309,46 @@ export default function HomePage() {
               </button>
             </div>
             <OwlCarousel className="owl-theme mt-4" loop dotsEach {...options}>
-              <div class="item">
-                <div className="feedback-outer  p-4">
-                  <div className="rating mb-3">
-                    <CiStar />
-                    <CiStar />
-                    <CiStar />
-                    <CiStar />
-                    <CiStar />
-                  </div>
-                  <div>
-                    <p>
-                      Designspace is a really great site with really great{" "}
-                      <br /> people and the quality of content is excellent.
-                      Some of <br />
-                      the best designers in the world use this, and it is <br />{" "}
-                      inspirational.
-                    </p>
-                  </div>
-                  <div className="d-flex align-items-center">
-                    <div className="feed-img">
-                      <img src={feedone} alt="feed" className="" />
+              {feedback.map((feedItems,key)=>{
+                return (
+                  <div class="item">
+                  <div className="feedback-outer  p-4">
+                    <div className="rating mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                   <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                </svg>
+
                     </div>
-                    <div className="mt-3 mx-2">
-                      <h5 className="happy ">Angela Karamoy</h5>
-                      <p className="">Happy customer</p>
+                    <div>
+                      <p className="feedback-text">                     
+                     {feedItems.des}
+                      </p>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div className="feedback-outer  p-4">
-                  <div className="rating mb-3">
-                    <CiStar />
-                    <CiStar />
-                    <CiStar />
-                    <CiStar />
-                    <CiStar />
-                  </div>
-                  <div>
-                    <p>
-                      Designspace is a really great site with really great{" "}
-                      <br /> people and the quality of content is excellent.
-                      Some of <br />
-                      the best designers in the world use this, and it is <br />{" "}
-                      inspirational.
-                    </p>
-                  </div>
-                  <div className="d-flex align-items-center">
-                    <div className="feed-img">
-                      <img src={feedone} alt="feed" className="" />
-                    </div>
-                    <div className="mt-3 mx-2">
-                      <h5 className="happy ">Angela Karamoy</h5>
-                      <p className="">Happy customer</p>
+                    <div className="d-flex align-items-center">
+                      <div className="feed-img">
+                        <img src={feedItems.src} alt="feed" className="" />
+                      </div>
+                      <div className="mt-3 mx-2">
+                        <h5 className="happy ">{feedItems.name}</h5>
+                        <p className="">{feedItems.feedback}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+                )
+              })}
             </OwlCarousel>
           </div>
         </div>

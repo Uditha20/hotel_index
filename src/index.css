@@ -1,12 +1,15 @@
 /* nav bar css */
-
 *{
   font-family: 'Plus Jakarta Sans';
+}
+.owl-carousel .active span{
+  background-color:#34cac6 !important;
 }
 .navbar {
   /* background-color: #ffffff; */
   height: 80px;
   position: relative;
+  
   /* width: 1140px; */
 }
 
@@ -14,7 +17,9 @@
   font-weight: 700;
 }
 .nav-link {
+  font-size: 16px;
   font-weight: 500;
+  color: #121511;
 }
 
 .nav-btn-primary {
@@ -23,13 +28,16 @@
   border-radius: 20px;
   color: #ffffff;
 }
+
+.nav-item{
+  margin-right: 20px;
+}
 @media screen and (max-width: 992px) {
-  .abc{
+  .navbar-item{
     background-color: #ffffff;
     opacity: 0.8;
     border-radius: 15px;
-    z-index: 1;
-    
+    z-index: 1; 
   }
 
   ul,.nav-btn{
@@ -88,62 +96,90 @@
 
 }
 
+@media screen and (max-width:678px){
+  .hero-text{
+    font-size: 40px;
+    line-height: 50px;
+  } 
+  
+}
+
 .filter-bar{
   height:120px ;
   /* width: 1140px; */
   border-radius:50px;
   background-color: #ffffff;
 }
+.filter-bar h5{
+  color:#121511;
+  font-size: 20px;
+}
 
 .filter-bar-btn{
   /* margin: 15px; */
-  height: 100px;
+  height: 120px;
   width: 200px;
   border-radius: 50px;
   background-color: #34cac6;
   color: #ffffff;
   font-size: 20px;
- 
-
-
+  margin-left: 60px;
+}
+.filter-bar-btn:hover{
+  background-color: #34cac6;
+  color: #ffffff;
 }
 
 
 /* best offer */
 .best-outer{
-  /* height: 665px; */
+  height: 550px;
+}
+.best-outer h1{
+  font-size: 48px;
 }
 
-.best-offer-btn{
+.best-offer-btn, .best-offer-btn:hover{
   background-color:#F1F7F6;
   border-radius: 20px;
   height: 40px;
   width: 102px;
   color: #34cac6;
 }
+
+
+.book-btn{
+  background-color: #34cac6;
+  color: #ffffff;
+  border-radius: 20px;
+}
+.book-btn:hover{
+  background-color: #34cac6;
+  color: #ffffff;
+}
 .offer-card{
 
   height:262px;
-  width: 555px;
+  width: 700px;
+  
 }
 .offer-card-inner{
   background-color: #F4F9F8;
-  width: 555px;
+  width: 630px;
   border-radius: 15px;
-  
-
 }
 .offer-img{
   height: 200px;
- 
   width: 200px !important;
 }
+
+
 
 /* popular */
 
 .popular-card{
   height:425px ;
-  width: 360px;
+  width: 400px;
   border-radius: 25px;
 }
 
@@ -151,6 +187,46 @@
   height: 260px;
 }
 
+.populart-btn, .populart-btn:hover{
+  background-color:#34cac6;
+  border-radius: 20px;
+  height: 40px;
+  width: 102px;
+  color: #ffffff;
+}
+
+@media screen and (max-width:992px){
+  .best-offer-btn{
+    width: 150px;
+  }
+  .offer-card-inner{
+    background-color: #F4F9F8;
+    width: 400px;
+    border-radius: 15px;
+  }
+  .offer-img{
+    height: 100px;
+    width: 100px !important;
+  }
+
+  .best-text{
+    font-size: 10px;
+  }
+  .offer-card{
+    height:200px;
+   
+  }
+  
+.populart-btn, .populart-btn:hover{
+  margin-left: 10px;
+}
+.popular-card{
+  height:325px ;
+  width: 250px;
+  border-radius: 25px;
+}
+
+}
 
 /* care */
 .care-inner{
@@ -162,11 +238,36 @@
   height: 592px;
   width: 555px;
   background-color:#F4F9F8;
+  border-radius: 15px;
+}
+
+@media screen and (max-width:678px){
+
+  .care-text{
+    font-size: 22px !important;
+    font-weight: bold;
+    
+  }
+  .care-inner{
+    height: 450px;
+    width: 465px;
+  }
+  .care-inner-right{
+    height: 450px;
+    width: 320px;
+    background-color:#F4F9F8;
+    border-radius: 15px;
+  }
+  .care-inner-right img{
+    height: 250px !important;
+    width: 250px !important;
+  }
+
 }
 
 /* feedback */
 .feedback-outer{
-  width: 555px;
+  width: 630px;
   height: 300px;
   background-color: #ffffff;
   border-radius: 10px;
@@ -180,6 +281,44 @@
 .happy{
   margin: 0px;
   padding: 0px;
+}
+
+.rating svg{
+  height: 20px;
+  width: 20px;
+  fill: yellow;
+  color:yellow;
+  
+  
+}
+
+@media screen and (max-width:678px){
+
+  .care-text{
+    font-size: 22px !important;
+    font-weight: bold;
+    
+  }
+  .care-inner{
+    height: 450px;
+    width: 465px;
+  }
+  .care-inner-right{
+    height: 450px;
+    width: 320px;
+    background-color:#F4F9F8;
+    border-radius: 15px;
+  }
+  .care-inner-right img{
+    height: 250px !important;
+    width: 250px !important;
+  }
+  .feedback-outer{
+    width: 400px;
+    height: 350px;
+  }
+  
+
 }
 
 
